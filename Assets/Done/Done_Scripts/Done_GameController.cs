@@ -33,7 +33,7 @@ public class Done_GameController : MonoBehaviour
 	{
 		if (restart)
 		{
-			if (Input.GetKeyDown (KeyCode.R))
+			if (Input.GetKeyDown (KeyCode.R) || Input.GetButton("Fire1"))
 			{
 				Application.LoadLevel (Application.loadedLevel);
 			}
@@ -57,7 +57,7 @@ public class Done_GameController : MonoBehaviour
 			
 			if (gameOver)
 			{
-				restartText.text = "Press 'R' for Restart";
+				restartText.text = "Press 'R' or Tap to Restart";
 				restart = true;
 				break;
 			}
